@@ -75,6 +75,10 @@ function App() {
           Start
         </button>
         ) : null }
+        {!gameOver && !loading && number + 1 === TOTAL_QUESTIONS && userAnswers.length === number + 1 ? 
+          <p className='score'>FINAL</p>
+          : null 
+        }
         { !gameOver ? <p className='score'>Score: {score}</p> : null }
         { loading ? <p>Loading questions...</p> : null}
         { !loading && !gameOver && 
